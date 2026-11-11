@@ -73,12 +73,14 @@ button:hover{transform:translateY(-3px)}button.secondary{background:#ffffff16}bu
 <div class="tag">Little moments, lovely memories</div><h2 class="section-title">Our Memory Gallery 💗</h2>
 <p class="section-sub">A few snapshots to make your birthday even more special.</p>
 <div class="gallery">
-<figure class="photo-card"><img src="images/memory-1.jpg" alt="A scenic portrait"><figcaption>A moment worth remembering ✨</figcaption></figure>
 <figure class="photo-card"><img src="images/memory-2.jpg" alt="A happy selfie together"><figcaption>Smiles make the best memories 😊</figcaption></figure>
 <figure class="photo-card"><img src="images/memory-3.jpg" alt="A black and white selfie"><figcaption>A little throwback in black and white 🌼</figcaption></figure>
 <figure class="photo-card"><img src="images/memory-4.jpg" alt="Another happy selfie"><figcaption>More memories, more reasons to smile 💕</figcaption></figure>
+<figure class="photo-card"><img src="images/memory-5.jpg" alt="A cheerful selfie together"><figcaption>One more lovely moment together 💗</figcaption></figure>
+<figure class="photo-card"><img src="images/memory-6.jpg" alt="Yasmeen in a pink saree"><figcaption>Pretty in pink 🌸</figcaption></figure>
+<figure class="photo-card"><img src="images/memory-7.jpg" alt="Yasmeen outdoors in a magenta saree"><figcaption>Keep shining, birthday girl ✨</figcaption></figure>
 </div>
-<div class="slideshow"><div class="slide-frame"><img id="slideImage" src="images/memory-1.jpg" alt="Birthday photo slideshow"></div><div class="slide-caption" id="slideCaption">A moment worth remembering ✨</div><div class="slide-controls"><button onclick="changeSlide(-1)">❮ Previous</button><button onclick="changeSlide(1)">Next ❯</button></div></div>
+<div class="slideshow"><div class="slide-frame"><img id="slideImage" src="images/memory-2.jpg" alt="Birthday photo slideshow"></div><div class="slide-caption" id="slideCaption">A moment worth remembering ✨</div><div class="slide-controls"><button onclick="changeSlide(-1)">❮ Previous</button><button onclick="changeSlide(1)">Next ❯</button></div></div>
 </section>
 <section class="panel" id="cakePanel"><div style="font-size:64px">🎂 <span id="flame" class="candle-flame">🔥</span></div><p style="color:#f7d8eb;margin:8px 0 0">Make a wish, Yasmeen…</p></section>
 <section class="panel message" id="message"><div class="tag">From your friend, with lots of good wishes</div><h2 style="color:var(--gold);text-align:center">Dear Yasmeen 💗</h2>
@@ -89,8 +91,8 @@ button:hover{transform:translateY(-3px)}button.secondary{background:#ffffff16}bu
 <script>
 const lines=[["A special day","Some days are special… and today is extra special because it's your birthday! 💖"],["A little reminder","You deserve all the happiness, kindness, and wonderful surprises this world can offer. 🌷"],["Friendship","Thank you for the smiles, memories, and friendship. I'm lucky to have you as a friend. 🫶"],["Your dreams","Keep believing in yourself. Keep chasing your dreams, one beautiful step at a time. ✨"],["A wish for you","May this year bring new adventures, big achievements, and countless reasons to smile. 🌈"],["One last thing","Keep smiling always, Yasmeen. The world is brighter with your smile. Happy Birthday! 🎂"]];
 let step=0, audioCtx=null, slide=0;
-const photos=["images/memory-1.jpg","images/memory-2.jpg","images/memory-3.jpg","images/memory-4.jpg"];
-const captions=["A moment worth remembering ✨","Smiles make the best memories 😊","A little throwback in black and white 🌼","More memories, more reasons to smile 💕"];
+const photos=["images/memory-2.jpg","images/memory-3.jpg","images/memory-4.jpg","images/memory-5.jpg","images/memory-6.jpg","images/memory-7.jpg"];
+const captions=["Smiles make the best memories 😊","A little throwback in black and white 🌼","More memories, more reasons to smile 💕","One more lovely moment together 💗","Pretty in pink 🌸","Keep shining, birthday girl ✨"];
 function nextStory(){step=(step+1)%lines.length;document.getElementById('stepLabel').textContent=lines[step][0];document.getElementById('storyText').textContent=lines[step][1]}
 function toggleLights(){document.body.classList.toggle('lights-on')}
 function decorate(){for(let i=0;i<90;i++){let c=document.createElement('i');c.className='confetti';c.style.left=Math.random()*100+'vw';c.style.background=['#ff75b7','#ffd77a','#9be7ff','#c8ffb0','#fff'][i%5];c.style.animationDelay=Math.random()*1.5+'s';document.body.appendChild(c);setTimeout(()=>c.remove(),5500)}}
